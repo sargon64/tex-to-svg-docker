@@ -14,9 +14,7 @@ const server = http.createServer(async function (request, response) {
     query.backgroundColor = 'white';
   }
   if (!query.tex) {
-    response.writeHead(302, {
-      Location: 'https://www.cheminfo.org/flavor/tools/TexToImg/index.html',
-    });
+    response.statusCode(400);
     response.end();
     return;
   }
@@ -52,4 +50,4 @@ const server = http.createServer(async function (request, response) {
 });
 server.timeout = 2000;
 
-server.listen(80);
+server.listen(8080);

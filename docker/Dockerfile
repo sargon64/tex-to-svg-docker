@@ -2,7 +2,7 @@ FROM node:14
 
 RUN apt-get update && apt-get install -y git 
 
-EXPOSE 80
+EXPOSE 8080
 
 WORKDIR /node
 
